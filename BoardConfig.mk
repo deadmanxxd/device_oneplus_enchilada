@@ -22,5 +22,8 @@ DEVICE_PATH := device/oneplus/enchilada
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
 
+# Prebuilt TWRP include
+-include device/twrp/enchilada/twrp.mk
+
 # inherit from the proprietary version
 -include vendor/oneplus/enchilada/BoardConfigVendor.mk
