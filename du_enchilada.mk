@@ -21,24 +21,18 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from enchilada device
 $(call inherit-product, device/oneplus/enchilada/device.mk)
 
-# Inherit some common Evolution X stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
-
-# Official
-CUSTOM_BUILD_TYPE := OFFICIAL
+# Inherit some common Corvus stuff.
+$(call inherit-product, vendor/du/config/common_full_phone.mk)
 
 # Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1080
 
-# Gapps
-TARGET_GAPPS_ARCH := arm64
-TARGET_INCLUDE_WIFI_EXT := true
-
-PRODUCT_NAME := aosp_enchilada
+# Device identifier. This must come after all inclusions.
+PRODUCT_NAME := du_enchilada
 PRODUCT_DEVICE := enchilada
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
-PRODUCT_MODEL := ONEPLUS A6003
+PRODUCT_MODEL := ONEPLUS A6000
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
@@ -46,7 +40,7 @@ TARGET_VENDOR_PRODUCT_NAME := OnePlus6
 TARGET_VENDOR_DEVICE_NAME := OnePlus6
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_DEVICE=OnePlus6 \
+    PRODUCT_DEVICE=OnePlus6 \
     PRODUCT_NAME=OnePlus6 \
     PRIVATE_BUILD_DESC="OnePlus6-user 8.1.0 OPM1.171019.011 273 release-keys"
 
