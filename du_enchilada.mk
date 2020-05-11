@@ -46,3 +46,5 @@ BUILD_FINGERPRINT := google/coral/coral:10/QQ2A.200405.005/6254899:user/release-
 # PixelGApps
 $(call inherit-product-if-exists, vendor/pixelgapps/pixel-gapps.mk)
 
+# Official
+DU_BUILD_TYPE := OFFICIAL
